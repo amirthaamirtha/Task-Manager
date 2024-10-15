@@ -1,0 +1,6 @@
+import json
+
+def save_tasks(task_list, filename='tasks.json'):
+    with open(filename, 'w') as f:
+        json.dump([task.__dict__ for task in task_list], f)
+    print("Tasks saved.")
